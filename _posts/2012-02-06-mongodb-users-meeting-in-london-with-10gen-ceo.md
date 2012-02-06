@@ -33,7 +33,7 @@ Dwight 还讨论了 record 在插入新数据后的情况。新数据插入后�
 剩下的内容都是他或者其他 10gen 员工之前在各种场合讲过的，比如 index 的增加会降低写的性能，比如 index 和 RAM 的关系，这个 stackoverflow [页面](http://stackoverflow.com/questions/2811299/mongodb-index-ram-relationship) 回答的很好。（两个答案都好）
 
 最后 Dwight 老师说了如何 cash 的问题，因为 MongoDB 使用了 Memory-Mapped，所以 cache 是交给 OS 做的（采用 LRU 策略）。所以对一些数据可以尽量的将他们放到同一个 page （4K）上。他用了 Twitter 作为例子，所有的 tweet 是一个 collection，如果单从 author 去找他最近发过的 tweets，可能会访问磁盘上多个地方。如果新建一个 collection，每个文档是某一用户最近发的 tweet，那么查询效率和 cache 效率都会高很多。但是 Dwight 也说，这会增加 programmer
-的许多额外工作，所以 don't it until you really have to. 
+的许多额外工作，所以 don't do it until you really have to. 
 
 嗯，差不多就是这些内容。
 
