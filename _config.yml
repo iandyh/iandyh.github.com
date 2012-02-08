@@ -9,13 +9,14 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title: andyh
+title: nowhere null
 tagline: Site Tagline
-author :
-  name : andy
+author : 
+  name : andyh
   email : zhandyh@gmail.com
   github : iandyh
   twitter : iandyh
+  
   # feedburner : feedname
 
 # The production_url is only used when full-domain names are needed

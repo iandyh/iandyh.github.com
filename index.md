@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hi, there
+title: here we go
 ---
 {% include JB/setup %}
 <ul class="posts">
