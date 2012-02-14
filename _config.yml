@@ -68,7 +68,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : andytechs
     livefyre :
       site_id : 123
     intensedebate :
