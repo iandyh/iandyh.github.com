@@ -14,7 +14,8 @@ author :
   name : andyh
   email : zhandyh@gmail.com
   github : iandyh
-  douban : douban.com/people/andyh
+  #douban : douban.com/people/andyh
+  twitter: iandyh
   # feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
@@ -25,7 +26,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://iandyh.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
