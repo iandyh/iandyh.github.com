@@ -1,5 +1,7 @@
 _site/*
 _theme_packages/*
+supervisord.pid
+supervisord.log
 
 Thumbs.db
 .DS_Store
