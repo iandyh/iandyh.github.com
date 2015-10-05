@@ -39,11 +39,11 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: #00a;
 }
 
 a:visited {
-  color: #a0a;
+  color: #00a;
 }
 
 table {
