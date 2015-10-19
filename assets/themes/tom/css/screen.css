@@ -110,9 +110,13 @@ ul.posts {
     margin-top: 2em;
   }
 
+  .site .footer {
+    overflow: hidden
+  }
+
   .site .footer ul li {
       float: left;
-      margin-right: 3em;
+      margin-lef: 2em;
   }
 
   .site .footer a {
