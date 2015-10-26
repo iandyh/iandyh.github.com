@@ -8,7 +8,7 @@ tags: []
 
 {% include JB/setup %}
 
-This week has been lazy. Only rad one proper article. 
+This week has been lazy. Only read one proper article. 
 
 # Enterprise Integration Using REST
 
