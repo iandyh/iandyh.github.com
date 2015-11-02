@@ -18,13 +18,13 @@ Distributed SQL. An ambitious project. It claims it can reach around 80% of Redi
 
 [https://aphyr.com/posts/288-the-network-is-reliable](https://aphyr.com/posts/288-the-network-is-reliable)
 
-It's a collection of many many production accidents reports, or a more brutal word,  postmortems. The conclusion is simple: Your network is NOT reliable and be prepared for the shit.
+It's a collection of many many production incidents reports, or a more brutal word,  postmortems. The conclusion is simple: Your network is NOT reliable and be prepared for the shit.
 
 # Billing Incident Post-Mortem: Breakdown, Analysis and Root Cause
 
 [https://www.twilio.com/blog/2013/07/billing-incident-post-mortem-breakdown-analysis-and-root-cause.html](https://www.twilio.com/blog/2013/07/billing-incident-post-mortem-breakdown-analysis-and-root-cause.html)
 
-I found a Redis report from the second article. The root cause to their Redis production accident: A master was disconnected with its multiple slaves. When the connection was resumed, the multiple `sync` command overloaded the master and it failed. During the restart, the master loaded a wrong configuration file so that it started with a non-existent AOF file instead of an RDB file. As a result, all the data in master was gone. What's worse? The mis-configuration made the master become its own slave and become a read-only slave. So the master cannot be written and read. 
+I found a Redis report from the second article. The root cause to their Redis production incident: A master was disconnected with its multiple slaves. When the connection was resumed, the multiple `sync` command overloaded the master and it failed. During the restart, the master loaded a wrong configuration file so that it started with a non-existent AOF file instead of an RDB file. As a result, all the data in master was gone. What's worse? The mis-configuration made the master become its own slave and become a read-only slave. So the master cannot be written and read. 
 
 # The Stack That Helped Medium Drive 2.6 Millennia of Reading Time
 
