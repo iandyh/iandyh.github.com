@@ -12,7 +12,7 @@ title: nowhere null
 tagline: Site Tagline
 author :
   name : andyh
-  email : zhandyh@gmail.com
+  email : mail@andyh.io
   github : iandyh
   #douban : douban.com/people/andyh
   twitter: iandyh
@@ -82,20 +82,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
-    disqus :
-      short_name : andytechs
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
-    duoshuo :
-      short_name : jekyllbootstrap
+    provider : false
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
