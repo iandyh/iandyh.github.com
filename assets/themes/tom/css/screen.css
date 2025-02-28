@@ -113,16 +113,19 @@ ul.posts {
     overflow: hidden
   }
 
+  .site .footer ul {
+    list-style-type: circle;
+  }
+
   .site .footer ul li {
       float: left;
       margin-left: 2em;
+      margin-top: 10px;
   }
 
   .site .footer a {
       color: #8085C1;
   }
-
-
 
 /*****************************************************************************/
 /*
