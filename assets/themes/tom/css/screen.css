@@ -140,27 +140,43 @@ ul.posts {
 
   /* standard */
 
-  #post pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .4em;
-  }
+  /*
+  disable for now as code has already been styled
+  */
+  /* #post pre {
+
+  } */
 
   #post ul,
   #post ol {
     margin-left: 1.35em;
   }
 
+  /* inline code */
   #post code {
     border: 1px solid #ddd;
-    background-color: #eef;
-    font-size: 85%;
-    padding: 0 .2em;
+    background-color: #2a2f3a;
+    color:#dcdcdc; /* Light text */
+    line-height: 1.5;
+    white-space: pre-wrap;
+    font-size: 0.80em;
+    padding: 0.3em;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    border-radius: 8px;
   }
 
-    #post pre code {
-      border: none;
-    }
+  #post pre code {
+    display: block;
+    background-color: #2a2f3a;
+    color:#dcdcdc; /* Light text */
+    overflow-x: auto;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    font-size: 0.80em;
+    padding: 1em;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    border-radius: 8px;
+  }
 
   /* terminal */
 
