@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -19,22 +20,34 @@ body {
   background-color: white;
   font: 18px IBM Plex Serif, helvetica, arial, clean, sans-serif;
   text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  word-break: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.2;
+  text-align: left;
 }
 
 h1 {
   margin-bottom: 1em;
+  margin-top: 0;
 }
 
 p {
   margin: 1em 0;
+  text-align: left;
 }
 
 a {
   color: #00a;
+  text-decoration: underline;
+  word-break: break-all;
 }
 
 a:hover {
@@ -48,6 +61,13 @@ a:visited {
 table {
   font-size: inherit;
   font: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+td, th {
+  padding: 0.5em 1em;
+  text-align: left;
 }
 
 /*****************************************************************************/
@@ -59,16 +79,19 @@ table {
 ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
+  padding-left: 0;
 }
 
-  ul.posts li {
-    line-height: 1.75em;
-  }
+ul.posts li {
+  line-height: 1.75em;
+  margin-bottom: 0.5em;
+}
 
-  ul.posts span {
-    color: #aaa;
-    font-size: 80%;
-  }
+ul.posts span {
+  color: #aaa;
+  font-size: 80%;
+  margin-left: 0.5em;
+}
 
 /*****************************************************************************/
 /*
@@ -79,14 +102,19 @@ ul.posts {
 .site {
   text-align: justify;
   width: 43em;
+  max-width: 95vw;
   margin: 3em auto 2em auto;
-  line-height: 1.3em;
+  line-height: 1.6em;
+  padding: 0 1em;
+  background: transparent;
 }
 
 .title {
   font-weight: bold;
   margin-bottom: 1em;
-  font-size: 24px;
+  font-size: 2em;
+  text-align: left;
+  line-height: 1.1;
 }
 .title a {
     text-decoration: none;
@@ -94,36 +122,37 @@ ul.posts {
 .site .nav {
     margin-bottom: 2em;
     font-size: 16px;
+    text-align: left;
 }
 
-  .site .meta {
-    color: #aaa;
-  }
+.site .meta {
+  color: #aaa;
+}
 
-  .site .footer {
-    font-size: 80%;
-    color: #666;
-    border-top: 4px solid #eee;
-    margin-top: 2em;
-  }
+.site .footer {
+  font-size: 80%;
+  color: #666;
+  border-top: 4px solid #eee;
+  margin-top: 2em;
+  overflow: hidden;
+  padding-top: 1em;
+  text-align: left;
+}
 
-  .site .footer {
-    overflow: hidden
-  }
+.site .footer ul {
+  list-style-type: circle;
+  padding-left: 1.5em;
+}
 
-  .site .footer ul {
-    list-style-type: circle;
-  }
+.site .footer ul li {
+    float: left;
+    margin-left: 2em;
+    margin-top: 10px;
+}
 
-  .site .footer ul li {
-      float: left;
-      margin-left: 2em;
-      margin-top: 10px;
-  }
-
-  .site .footer a {
-      color: #8085C1;
-  }
+.site .footer a {
+    color: #8085C1;
+}
 
 /*****************************************************************************/
 /*
@@ -134,64 +163,86 @@ ul.posts {
 #post {
     border-top: 1px solid #233;
     padding-top: 30px;
+    text-align: left;
+    max-width: 43em;
+    margin: 0 auto;
 }
 
-  /* standard */
+#post ul,
+#post ol {
+  margin-left: 2em;
+  margin-bottom: 1.2em;
+  padding-left: 1.2em;
+}
 
-  /*
-  disable for now as code has already been styled
-  */
-  /* #post pre {
+#post ul {
+  list-style-type: disc;
+}
 
-  } */
+#post ol {
+  list-style-type: decimal;
+}
 
-  #post ul,
-  #post ol {
-    margin-left: 1.35em;
-  }
+#post li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
 
-  /* inline code */
-  #post code {
-    border: 1px solid #ddd;
-    background-color: #2a2f3a;
-    color:#dcdcdc; /* Light text */
-    line-height: 1.5;
-    white-space: pre-wrap;
-    font-size: 0.80em;
-    padding: 0.3em;
-    font-family: 'Fira Code', 'Courier New', Courier, monospace;
-    border-radius: 8px;
-  }
+#post blockquote {
+  margin: 1.5em 2em;
+  padding: 0.5em 1em;
+  border-left: 4px solid #eee;
+  font-style: italic;
+  color: #555;
+  background: #fafafa;
+}
 
-  #post pre code {
-    display: block;
-    background-color: #2a2f3a;
-    color:#dcdcdc; /* Light text */
-    overflow-x: auto;
-    line-height: 1.5;
-    white-space: pre-wrap;
-    font-size: 0.80em;
-    padding: 1em;
-    font-family: 'Fira Code', 'Courier New', Courier, monospace;
-    border-radius: 8px;
-  }
+#post code {
+  display: inline;
+  border: 1px solid #ddd;
+  background-color: #2a2f3a;
+  color:#dcdcdc;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  font-size: 0.80em;
+  padding: 0.1em 0.3em;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  border-radius: 4px;
+}
 
-  /* terminal */
+#post pre code {
+  display: block;
+  background-color: #2a2f3a;
+  color:#dcdcdc;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.80em;
+  padding: 1em;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  border-radius: 8px;
+}
 
-  #post pre.terminal {
-    border: 1px solid black;
-    background-color: #333;
-    color: white;
-  }
+#post pre.terminal {
+  border: 1px solid black;
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  overflow-x: auto;
+}
 
-  #post pre.terminal code {
-    background-color: #333;
-  }
+#post pre.terminal code {
+  background-color: #333;
+}
 
 #related {
   margin-top: 2em;
+  text-align: left;
 }
 
-  #related h2 {
-    margin-bottom: 1em;
-  }
+#related h2 {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
