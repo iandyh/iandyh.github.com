@@ -2,6 +2,7 @@ _site/*
 _theme_packages/*
 supervisord.pid
 supervisord.log
+drafts/*
 
 Thumbs.db
 .DS_Store
