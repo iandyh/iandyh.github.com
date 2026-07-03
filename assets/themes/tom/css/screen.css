@@ -70,6 +70,31 @@ td, th {
   text-align: left;
 }
 
+#post table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  word-break: normal;
+}
+
+#post th,
+#post td {
+  white-space: nowrap;
+  word-break: normal;
+}
+
+#post table code {
+  white-space: nowrap;
+}
+
+#post thead th {
+  border-bottom: 2px solid #ddd;
+}
+
+#post tbody tr + tr td {
+  border-top: 1px solid #eee;
+}
+
 /*****************************************************************************/
 /*
 /* Home
