@@ -235,6 +235,21 @@ ul.posts span {
   border-radius: 4px;
 }
 
+#post .highlight {
+  background-color: #2a2f3a;
+  border-radius: 8px;
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+#post .highlight pre {
+  margin: 0;
+}
+
+#post .highlight pre code {
+  border: 0;
+}
+
 #post pre code {
   display: block;
   background-color: #2a2f3a;
