@@ -22,13 +22,13 @@ The web app is running inside Docker containers using Docker Machine + DigitalOc
 
 Ok, that's it. Let me share some interesting readings.
 
-# Dapper, a Large-Scale Distributed Systems Tracing Infrastructure
+## Dapper, a Large-Scale Distributed Systems Tracing Infrastructure
 
 [http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf)
 
 This is an old paper(2010). It explained Google's internal distributed tracing system. The idea is quite simple actually. A context is attach to the requests as identity. The trace data is written to local log files and then is pulled from production. Later the data will be written to data store so that the overhead of tracking is minimised in production. There are some open source implementation based on Dapper, e.g. [https://github.com/openzipkin/zipkin](https://github.com/openzipkin/zipkin) from Twitter.
 
-# How long does it take to make a context switch?
+## How long does it take to make a context switch?
 
 [http://blog.tsunanet.net/2010/11/how-long-does-it-take-to-make-context.html](http://blog.tsunanet.net/2010/11/how-long-does-it-take-to-make-context.html)
 

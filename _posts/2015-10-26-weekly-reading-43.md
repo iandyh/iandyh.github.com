@@ -10,7 +10,7 @@ tags: []
 
 This week has been lazy. Only read one proper article. 
 
-# Enterprise Integration Using REST
+## Enterprise Integration Using REST
 
 [http://martinfowler.com/articles/enterpriseREST.html](http://martinfowler.com/articles/enterpriseREST.html)
 

@@ -10,7 +10,7 @@ tags: []
 
 I was out for hiking last weekend. So I was not able to write #41. 
 
-# Apache Kafka, Samza, and the Unix Philosophy of Distributed Data
+## Apache Kafka, Samza, and the Unix Philosophy of Distributed Data
 
 [http://www.confluent.io/blog/apache-kafka-samza-and-the-unix-philosophy-of-distributed-data](http://www.confluent.io/blog/apache-kafka-samza-and-the-unix-philosophy-of-distributed-data)
 
@@ -18,7 +18,7 @@ Martin Kleppmenn talks about the philosophy behind using Kafka in distributed sy
 
 His blog has lots of good read.
 
-# Holistic Configuration Managementat Facebook
+## Holistic Configuration Managementat Facebook
 
 [http://sigops.org/sosp/sosp15/current/2015-Monterey/008-tang-online.pdf](http://sigops.org/sosp/sosp15/current/2015-Monterey/008-tang-online.pdf)
 

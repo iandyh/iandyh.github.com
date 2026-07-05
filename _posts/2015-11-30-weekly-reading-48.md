@@ -12,7 +12,7 @@ The project I've been working on is roughly done. I might publish it next week o
 
 As a result, I have not been reading too much. (Considering I also need to study Japanese...)
 
-# agentzh's Nginx Tutorial
+## agentzh's Nginx Tutorial
 
 [https://openresty.org/download/agentzh-nginx-tutorials-en.html](https://openresty.org/download/agentzh-nginx-tutorials-en.html)
 
