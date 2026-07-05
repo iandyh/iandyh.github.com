@@ -186,6 +186,7 @@ ul.posts span {
 /*****************************************************************************/
 
 #post {
+    --code-background: #2a2f3a;
     border-top: 1px solid #233;
     padding-top: 30px;
     text-align: left;
@@ -224,9 +225,9 @@ ul.posts span {
 
 #post code {
   display: inline;
-  border: 1px solid #ddd;
-  background-color: #2a2f3a;
-  color:#dcdcdc;
+  border: 1px solid var(--code-background);
+  background-color: var(--code-background);
+  color: #dcdcdc;
   line-height: 1.5;
   white-space: pre-wrap;
   font-size: 0.80em;
@@ -236,7 +237,7 @@ ul.posts span {
 }
 
 #post .highlight {
-  background-color: #2a2f3a;
+  background-color: var(--code-background);
   border-radius: 8px;
   margin: 1.5em 0;
   overflow-x: auto;
@@ -252,8 +253,8 @@ ul.posts span {
 
 #post pre code {
   display: block;
-  background-color: #2a2f3a;
-  color:#dcdcdc;
+  background-color: var(--code-background);
+  color: #dcdcdc;
   line-height: 1.6;
   white-space: pre-wrap;
   word-break: break-word;
