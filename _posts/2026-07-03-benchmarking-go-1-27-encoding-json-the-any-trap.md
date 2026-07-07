@@ -35,7 +35,7 @@ The benchmark runs four cases:
 - `encoding/json` with `GOEXPERIMENT=nojsonv2`: this is a build-time Go experiment setting that makes `encoding/json` use the legacy v1 implementation.
 - `goccy/go-json`: a third-party library that does not rely on `encoding/json`. It is included for comparison.
 
-The benchmark simply decodes the JSON into an `any` object.
+The benchmark simply decodes the JSON into an `any` value.
 
 ```go
 var v any
@@ -167,7 +167,7 @@ This benchmark decodes every record into `any`, so that difference dominates.
 
 **This time we see the decode performance gain.** 
 
-While decoding the entire JSON into `any` is quite an extreme case, after running an another benchmark by mixing the proper types and `any`, the slowdown appears when a large share of the decode workload goes through any/interface decoding. For example, with a simple `map[string]any` case:
+While decoding the entire JSON into `any` is quite an extreme case, after running another benchmark by mixing the concrete types and `any`, the slowdown appears when a large share of the decode workload goes through any/interface decoding. For example, with a simple `map[string]any` case:
 
 | Mode                         | ns/op | B/op | allocs/op | vs nojsonv2 v1 |
 | ---------------------------- | ----: | ---: | --------: | -------------: |
