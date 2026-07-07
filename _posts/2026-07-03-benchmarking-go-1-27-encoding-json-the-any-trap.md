@@ -35,6 +35,15 @@ The benchmark runs four cases:
 - `encoding/json` with `GOEXPERIMENT=nojsonv2`: this is a build-time Go experiment setting that makes `encoding/json` use the legacy v1 implementation.
 - `goccy/go-json`: a third-party library that does not rely on `encoding/json`. It is included for comparison.
 
+The benchmark simply decodes the JSON into an `any` object.
+
+```go
+var v any
+if err := c.unmarshal(record, &v); err != nil {
+    return err
+}
+```
+
 ### Decode results
 
 | Rank | Library                          | Total time | Mean/pass |   Throughput | ns/record | Allocated bytes/record | Allocs/record | Relative to v1 |
@@ -156,7 +165,16 @@ This benchmark decodes every record into `any`, so that difference dominates.
 |    1 | encoding/json (default jsonv2) | 14.346s |    2.869s | 152.84 MiB/s |     28691 |                   7149 |        131.42 |          1.69x |
 |    2 | encoding/json (nojsonv2 v1)    | 24.203s |    4.841s |  90.59 MiB/s |     48405 |                   8347 |        188.00 |          1.00x |
 
-**This time we see the decode performance gain.**
+**This time we see the decode performance gain.** 
+
+While decoding the entire JSON into `any` is quite an extreme case, after running an another benchmark by mixing the proper types and `any`, the slowdown appears when a large share of the decode workload goes through any/interface decoding. For example, with a simple `map[string]any` case:
+
+| Mode                         | ns/op | B/op | allocs/op | vs nojsonv2 v1 |
+| ---------------------------- | ----: | ---: | --------: | -------------: |
+| `GOEXPERIMENT=nojsonv2` / v1 | 528.8 |  896 |        12 |          1.00x |
+| default jsonv2 compatibility | 610.4 |  768 |        12 |   1.15x slower |
+
+On the other hand, when `any` is only a small part of a larger struct, jsonv2 can still outperform `nojsonv2` v1.
 
 ### Can we use the fast path?
 
@@ -191,13 +209,15 @@ json.Unmarshal([]byte(`{"x":{"new":2}}`), &v)
 | `encoding/json` default jsonv2 compatibility | `{"x":{"new":2}}` |
 | native `encoding/json/v2` | `{"x":{"old":1,"new":2}}` |
 
-In this case, we cannot simply remove the `AllowDuplicateNames` check because of the behavior.
+In this case, we cannot simply remove the `AllowDuplicateNames` check without changing this behavior.
 
 ## Conclusions
 
 At the start, GPT-5.5 chose `any` because the NDJSON data has mixed event shapes. After the analysis, we noticed that decoding into `any` through the compatibility route uses reflection-heavy generic decoding, which adds overhead. So we accidentally found an edge case where the v2-backed compatibility path can be slower than v1.
 
 In another run without decoding into `any`, we saw the struct decode performance gains promised by v2.
+
+If you have a complex data structure, and `any` only occasionally appears in the struct, then the overall performance improvement from v2 can still offset the performance degradation caused by reflection.
 
 In hindsight, you can't blame GPT-5.5 for being lazy. Sometimes, when facing mixed or complex data types, you tend to use `any`. Now we know the cost.
 
