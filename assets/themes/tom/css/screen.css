@@ -124,6 +124,9 @@ ul.posts li {
 ul.posts span {
   color: #aaa;
   font-size: 80%;
+  display: inline-block;
+  width: 6.5em;
+  text-align: right;
   margin-left: 0.5em;
 }
 
