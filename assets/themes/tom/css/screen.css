@@ -178,8 +178,9 @@ ul.posts span {
 
 .site .footer ul {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.35em 1.5em;
+  gap: 0.75em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -187,22 +188,61 @@ ul.posts span {
 
 .site .footer ul li {
   margin: 0;
-  white-space: nowrap;
 }
 
 .site .footer a {
   color: #4a50a8;
   text-decoration: none;
-  border-bottom: 1px solid rgba(74, 80, 168, 0.25);
 }
 
 .site .footer a:hover {
   color: #00a;
-  border-bottom-color: #00a;
 }
 
-.site .footer span {
+.site .footer svg {
+  display: block;
+  width: 1.1em;
+  height: 1.1em;
+  fill: currentColor;
+}
+
+.site .footer .footer-icon,
+.site .footer .footer-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2em;
+  min-height: 2em;
+  color: #777;
+}
+
+.site .footer .footer-icon {
+  border: 1px solid rgba(74, 80, 168, 0.25);
+  border-radius: 50%;
+}
+
+.site .footer .footer-icon:hover {
+  border-color: #00a;
+}
+
+.site .footer .footer-email {
+  gap: 0.35em;
+}
+
+.site .footer .footer-email span {
   color: #999;
+}
+
+.site .footer .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /*****************************************************************************/
@@ -239,6 +279,7 @@ ul.posts span {
   margin-bottom: 0.5em;
   line-height: 1.6;
 }
+
 
 #post blockquote {
   margin: 1.5em 2em;
