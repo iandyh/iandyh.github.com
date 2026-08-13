@@ -114,6 +114,7 @@ ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
   padding-left: 0;
+  text-align: left;
 }
 
 ul.posts li {
@@ -278,6 +279,18 @@ ul.posts span {
 #post li {
   margin-bottom: 0.5em;
   line-height: 1.6;
+}
+
+#post ul.posts {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 2em;
+  padding-left: 0;
+  text-align: left;
+}
+
+#post ul.posts li {
+  line-height: 1.75em;
 }
 
 
