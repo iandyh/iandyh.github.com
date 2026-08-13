@@ -164,28 +164,42 @@ ul.posts span {
 }
 
 .site .footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
+  font-size: 85%;
+  color: #777;
+  border-top: 2px solid #e2e2e2;
+  margin-top: 3em;
   overflow: hidden;
-  padding: 1em 0 3em;
+  padding: 1.5em 0 3.5em;
   text-align: left;
 }
 
 .site .footer ul {
-  list-style-type: circle;
-  padding-left: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em 1.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .site .footer ul li {
-    float: left;
-    margin-left: 2em;
-    margin-top: 10px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .site .footer a {
-    color: #8085C1;
+  color: #4a50a8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(74, 80, 168, 0.25);
+}
+
+.site .footer a:hover {
+  color: #00a;
+  border-bottom-color: #00a;
+}
+
+.site .footer span {
+  color: #999;
 }
 
 /*****************************************************************************/
