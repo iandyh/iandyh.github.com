@@ -254,8 +254,8 @@ ul.posts span {
 
 #post {
     --code-background: #2a2f3a;
-    border-top: 1px solid #233;
-    padding-top: 30px;
+    border-top: 2px solid #d8d8d8;
+    padding-top: 2em;
     text-align: left;
     max-width: 43em;
     margin: 0 auto;
@@ -301,6 +301,13 @@ ul.posts span {
   font-style: italic;
   color: #555;
   background: #fafafa;
+}
+
+#post hr {
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 2em auto;
+  width: 35%;
 }
 
 #post code {
@@ -364,6 +371,7 @@ ul.posts span {
 }
 
 #related h2 {
+  font-size: 1em;
   margin-bottom: 1em;
   margin-top: 0;
 }
