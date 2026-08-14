@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #43"
 description: ""
-category: 
-tags: []
+category: reading
+tags: [reading, software-architecture, microservices, rest]
 ---
 
 {% include JB/setup %}

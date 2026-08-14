@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #42"
 description: ""
-category: 
-tags: []
+category: reading
+tags: [reading, distributed-systems, kafka, configuration-management]
 ---
 
 {% include JB/setup %}

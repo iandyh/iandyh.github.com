@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #16"
 description: ""
-category: 
-tags: ["reading", "notes"]
+category: reading
+tags: [reading, history, ai, economics, education, mountaineering]
 ---
 
 [China’s History Introduction - MIT](https://www.youtube.com/watch?v=3dT8Wm5oI_o)

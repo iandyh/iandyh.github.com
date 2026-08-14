@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #40"
 description: ""
-category:
-tags: [tech]
+category: reading
+tags: [reading, distributed-systems, kubernetes, networking, ruby]
 ---
 
 {% include JB/setup %}

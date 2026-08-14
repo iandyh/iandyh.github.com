@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #48"
 description: ""
-category: 
-tags: []
+category: reading
+tags: [reading, nginx, openresty]
 ---
 
 {% include JB/setup %}

@@ -2,7 +2,7 @@
 layout: post
 title: "MongoDB Users Meeting in London with 10gen CEO"
 category: database
-tags: [NoSQl, London, MongoDB]
+tags: [mongodb, nosql, london]
 ---
 最初是 10gen 发来的邮件说，CEO Dwight Merriman（他也是 MongoDB 最早的作者） 会出席 MongoDB 用户的伦敦聚会，并做一次 presentation，内容是使用 MongoDB 的一些 tricks。我看到标题就激动了，立刻把这件事放在行程表上。
 

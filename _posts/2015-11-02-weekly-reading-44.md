@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #44"
 description: ""
-category: 
-tags: []
+category: reading
+tags: [reading, databases, distributed-systems, reliability]
 ---
 
 {% include JB/setup %}

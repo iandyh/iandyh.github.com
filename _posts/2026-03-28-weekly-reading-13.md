@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #13"
 description: ""
-category: 
-tags: []
+category: reading
+tags: [reading, ai, design, economics, health, music]
 ---
 
 [The Jony Ive Design for Christie's Rostrum](https://www.youtube.com/watch?v=HLXDxx06_EM)

@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #15"
 description: ""
-category: 
-tags: ["reading", "notes"]
+category: reading
+tags: [reading, business, education, japan, science, politics]
 ---
 
 [Tim Cook, the iPhone, and the Secretive Archives That Help Run Apple](https://www.wsj.com/tech/apple-50-archives-tim-cook-iphone-ipod-prototype-f0224bba?reflink=desktopwebshare_permalink)

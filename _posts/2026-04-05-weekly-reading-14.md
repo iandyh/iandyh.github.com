@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #14"
 description: ""
-category: 
-tags: ["reading", "notes"]
+category: reading
+tags: [reading, politics, economics, science, china]
 ---
 
 [Operation Epic Fury Should Make China Very Afraid](https://www.wsj.com/opinion/operation-epic-fury-should-make-china-very-afraid-88b2177f?mod=e2tw)

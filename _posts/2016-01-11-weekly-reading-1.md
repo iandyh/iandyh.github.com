@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #1"
 description: ""
-category:
-tags: []
+category: reading
+tags: [reading, distributed-systems, observability, performance]
 ---
 
 {% include JB/setup %}

@@ -5,17 +5,46 @@ header: Posts By Tag
 group: navigation
 ---
 {% include JB/setup %}
+{% assign taxonomy_items = site.tags | sort %}
 
-<ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
-</ul>
+<header class="taxonomy-header">
+  <h1>Tags</h1>
+  <p>{{ site.posts | size }} posts across {{ taxonomy_items | size }} tags.</p>
+</header>
 
-
-{% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+<nav class="taxonomy-index" aria-label="Tag index">
   <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
+    {% for tag in taxonomy_items %}
+      {% assign tag_name = tag[0] %}
+      {% assign tag_posts = tag[1] %}
+      {% assign tag_slug = tag_name | slugify %}
+      {% assign post_count = tag_posts | size %}
+      <li>
+        <a href="#tag-{{ tag_slug }}">
+          <span class="taxonomy-name">{{ tag_name }}</span>
+          <span class="taxonomy-count">{{ post_count }} {% if post_count == 1 %}post{% else %}posts{% endif %}</span>
+        </a>
+      </li>
+    {% endfor %}
   </ul>
-{% endfor %}
+</nav>
+
+<div class="taxonomy-groups">
+  {% for tag in taxonomy_items %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_posts = tag[1] %}
+    {% assign tag_slug = tag_name | slugify %}
+    {% assign post_count = tag_posts | size %}
+    <section class="taxonomy-group" aria-labelledby="tag-{{ tag_slug }}">
+      <div class="taxonomy-group-heading">
+        <h2 id="tag-{{ tag_slug }}">{{ tag_name }}</h2>
+        <span class="taxonomy-count">{{ post_count }} {% if post_count == 1 %}post{% else %}posts{% endif %}</span>
+      </div>
+      <ul class="taxonomy-posts">
+        {% for post in tag_posts %}
+          <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</div>

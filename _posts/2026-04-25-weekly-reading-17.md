@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #17"
 description: ""
-category: 
-tags: ["reading", "notes", "memory"]
+category: reading
+tags: [reading, business, japan, climate, ai, economics]
 ---
 
 [Japan’s mighty carmakers are in serious trouble](https://www.economist.com/business/2026/04/09/japans-mighty-carmakers-are-in-serious-trouble?giftId=ZmFkYTA5MzEtNjU4My00NGIzLTg2OTQtOGY4YzVmMDE4Y2Vh&utm_campaign=gifted_article)

@@ -3,7 +3,7 @@ layout: post
 title: "Weekly Reading #26"
 description: ""
 category: reading
-tags: [reading, notes, memory]
+tags: [reading, economics, finance, china, history]
 ---
 
 {% include JB/setup %}

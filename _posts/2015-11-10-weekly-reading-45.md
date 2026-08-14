@@ -2,8 +2,8 @@
 layout: post
 title: "Weekly Reading #45"
 description: ""
-category: 
-tags: []
+category: reading
+tags: [reading, redis, go, performance]
 ---
 
 {% include JB/setup %}
