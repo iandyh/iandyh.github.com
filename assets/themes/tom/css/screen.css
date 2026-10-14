@@ -486,6 +486,42 @@ ul.posts span {
   background-color: #333;
 }
 
+.post-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75em;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #dedede;
+  color: #666;
+  font-size: 85%;
+  text-align: left;
+}
+
+.post-share a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.35em 0.75em;
+  border: 1px solid #d9dbe8;
+  border-radius: 999px;
+  background: #f7f7fb;
+  color: #272c78;
+  text-decoration: none;
+  white-space: nowrap;
+  word-break: normal;
+}
+
+.post-share a:hover,
+.post-share a:focus-visible {
+  border-color: #777db2;
+  background: #f0f1f8;
+  color: #00a;
+}
+
 #related {
   margin-top: 2em;
   text-align: left;

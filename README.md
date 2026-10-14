@@ -6,6 +6,13 @@ The quickest way to start and publish your Jekyll powered blog. 100% compatible 
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
 
+### Post sharing
+
+Post pages include Hacker News, X, and LinkedIn share links below the article.
+They use `production_url` from `_config.yml` plus the post permalink, so local previews
+share the published URL rather than localhost. Hacker News and X also receive the
+post title. Links open in a new tab and work without JavaScript or social widgets.
+
 ## Version
 
 0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).

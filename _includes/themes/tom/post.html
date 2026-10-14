@@ -7,6 +7,21 @@
   {{ content }}
 </div>
 
+{% assign share_url = site.production_url | append: page.url | url_encode %}
+{% assign share_title = page.title | strip_html | url_encode %}
+<nav class="post-share" aria-label="Share this post">
+  <span>Share:</span>
+  <a href="https://news.ycombinator.com/submitlink?u={{ share_url }}&amp;t={{ share_title }}"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Share on Hacker News (opens in a new tab)">Hacker News</a>
+  <a href="https://x.com/intent/post?url={{ share_url }}&amp;text={{ share_title }}"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Share on X (opens in a new tab)">X</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Share on LinkedIn (opens in a new tab)">LinkedIn</a>
+</nav>
+
 <div id="related">
   <h2>Related Posts</h2>
   <ul class="posts">
